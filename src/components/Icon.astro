@@ -1,0 +1,11 @@
+---
+export interface Props {
+  name: string;
+  class: string;
+}
+
+const { name, class: className } = Astro.props as Props;
+const { default: innerHTML } = await import(`/src/assets/svg/${name}.svg?raw`);
+---
+
+<span class={`flex items-center ${className}`} set:html={innerHTML} />
