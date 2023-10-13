@@ -1,24 +1,28 @@
 ---
+import Icon from "./Icon.astro";
 import Partner from "./Partner.astro";
 ---
 
-<section class="px-6 pt-10 pb-16 bg-gray-50 dark:bg-gray-800">
+<section id="about" class="px-6 pt-10 pb-16 bg-gray-50 dark:bg-gray-800">
   <div class="mx-auto max-w-screen-xl lg:px-6">
-    <div class="mx-auto max-w-screen-sm text-center mb-8">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-      >
-        About me
-      </h2>
-      <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-        Explore the whole collection of open-source web components and elements
-        built with the utility classes from Tailwind
+    <div class="mx-auto max-w-screen-lg text-center mb-6 sm:mb-12">
+      <a class="hover:underline" href="/about-me">
+        <h2
+          class="flex justify-center gap-2 items-baseline mb-6 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          About me
+        </h2>
+      </a>
+      <p class="font-light text-gray-500 text-lg dark:text-gray-400">
+        Church-key viral you probably haven't heard of them, franzen affogato
+        narwhal skateboard taiyaki synth wayfarers lyft live-edge raclette tbh
+        thundercats.
       </p>
     </div>
   </div>
   <div class="mx-auto max-w-screen-xl">
     <div
-      class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400"
+      class="grid grid-cols-2 gap-x-8 gap-y-6 text-gray-500 sm:gap-x-12 sm:gap-y-6 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400"
     >
       <Partner logo="shellock-partner" link="https://shellock.co/" />
       <Partner logo="marfeel" link="https://www.marfeel.com/" />

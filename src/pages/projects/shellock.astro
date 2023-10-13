@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import ShellockLogo from "@assets/svg/shellock.svg";
+import Projects from "@components/Projects.astro";
+import About from "@components/About.astro";
+import Project from "@components/Project.astro";
+---
+
+<Project
+  title="Shellock App"
+  ,
+  subtitle="Shellock Platform and API"
+  description="Real-time updates from anywhere in the world managed with some clicks"
+  ,
+  image={{
+    src: ShellockLogo,
+    alt: "Shellock logo",
+    class: "bg-gray-50",
+  }}
+  technologies={[
+    "HTML",
+    "SASS",
+    "Typescript",
+    "React",
+    "Mongoose",
+    "Google Maps",
+    "Google Cloud",
+    "Jest",
+  ]}
+  ,
+  link="https://shellock.co"
+/>

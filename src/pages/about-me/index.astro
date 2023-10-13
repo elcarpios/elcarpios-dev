@@ -1,0 +1,140 @@
+---
+import Icon from "@components/Icon.astro";
+import Pill from "@components/Pill.astro";
+import Layout from "@layouts/Layout.astro";
+
+const STEP_TYPE = {
+  job: "briefcase",
+  certification: "certificate",
+};
+
+const STEPS: {
+  year: string;
+  title: string;
+  organisation: string;
+  description: string;
+  type: "job" | "certification";
+  technologies?: string[];
+}[] = [
+  {
+    year: "2008 - 2009",
+    title: "Technician in Computer Systems Admininstration",
+    organisation: "Col·legi Cultural",
+    description: "Description",
+    type: "certification",
+    technologies: ["HTML", "CSS", "Javascript", "PHP", "MySQL", "Linux"],
+  },
+  {
+    year: "2017",
+    title: "Fullstack Bootcamp",
+    organisation: "Ubiqum",
+    description: "",
+    type: "certification",
+    technologies: ["HTML", "CSS", "Javascript", "Java", "Spring Boot"],
+  },
+  {
+    year: "2017 - 2019",
+    title: "Frontend Developer",
+    organisation: "Marfeel",
+    description: "",
+    type: "job",
+    technologies: ["HTML", "SASS", "Javascript", "Java"],
+  },
+  {
+    year: "2018",
+    title: "Mobile Web Specialist",
+    organisation: "Google",
+    description: "",
+    type: "certification",
+  },
+  {
+    year: "2019 - 2021",
+    title: "Frontend Tech Lead",
+    organisation: "Marfeel",
+    description: "",
+    type: "job",
+    technologies: ["HTML", "SASS", "Typescript", "Java", "React", "PHP"],
+  },
+  {
+    year: "2021 - 2023",
+    title: "Fullstack Developer",
+    organisation: "Shellock",
+    description: "",
+    type: "job",
+    technologies: [
+      "HTML",
+      "SASS",
+      "Typescript",
+      "React",
+      "CapcitorJS",
+      "Mongoose",
+      "Express",
+      "Google Maps",
+      "Google Cloud",
+      "Jest",
+    ],
+  },
+];
+---
+
+<Layout title="elcarpios.dev - About me">
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-10 px-4 mx-auto max-w-screen-xl sm:py-14 lg:px-6">
+      <div class="mx-auto max-w-screen-sm text-center mb-10 lg:mb-12">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Certifications and career milestones
+        </h2>
+        <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+          Most relevant academic certificates and job positions.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-y-2 space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+      >
+        {
+          STEPS.map(
+            ({
+              title,
+              year,
+              organisation,
+              type,
+              description,
+              technologies = [],
+            }) => (
+              <div>
+                <div class="flex gap-4 mb-4">
+                  <div class="flex justify-center shrink-0 items-center rounded-full bg-primary-100 h-12 w-12 dark:bg-primary-900">
+                    <div class="font-semibold tracking-tight text-sm text-primary-600 dark:text-primary-300">
+                      <Icon
+                        name={STEP_TYPE[type]}
+                        class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold dark:text-white">{title}</h3>
+                    <div class="flex gap-1 items-center font-light text-gray-500 dark:text-gray-400">
+                      {organisation} | {year}
+                    </div>
+                  </div>
+                </div>
+                <p class="mb-4 text-gray-500 dark:text-gray-400">
+                  Church-key viral you probably haven't heard of them, franzen
+                  affogato narwhal skateboard taiyaki synth wayfarers lyft
+                  live-edge raclette tbh thundercats.
+                </p>
+                <div class="flex justify-stretch flex-wrap gap-2">
+                  {technologies.map((technology) => (
+                    <Pill>{technology}</Pill>
+                  ))}
+                </div>
+              </div>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -6,20 +6,19 @@ interface Props {
   title: string;
   subtitle: string;
   description: string;
+  link: string;
   image: {
     class?: string;
     src: LocalImageProps;
     alt: string;
   };
-  links: [
-    {
-      icon: string;
-      link: string;
-    },
-  ];
+  links: {
+    icon: string;
+    link: string;
+  }[];
 }
 
-const { title, subtitle, description, image, links } = Astro.props;
+const { title, subtitle, description, link, image, links } = Astro.props;
 ---
 
 <div
@@ -29,13 +28,13 @@ const { title, subtitle, description, image, links } = Astro.props;
     class={`h-48 sm:h-auto col-span-1 flex items-center justify-center rounded-lg ${
       image.class || ""
     }`}
-    href="#"
+    href={link}
   >
     <Image class="p-2 lg:p-4" src={image.src} alt={image.alt} height={180} />
   </a>
   <div class="col-span-2 p-5">
     <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-      <a href="#">{title}</a>
+      <a href={link}>{title}</a>
     </h3>
     <span class="text-gray-500 dark:text-gray-400">{subtitle}</span>
     <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
@@ -46,6 +45,7 @@ const { title, subtitle, description, image, links } = Astro.props;
         links.map(({ icon, link }) => (
           <li>
             <a
+              target="_blank"
               href={link}
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
