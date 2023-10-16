@@ -117,7 +117,7 @@ const STEPS: {
           technologies = [],
         }) => (
           <div class="flex flex-col shadow-md overflow-hidden items-stretch bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div class="flex gap-4 bg-gray-100 p-5">
+            <div class="flex gap-4 bg-gray-100 p-5 dark:bg-gray-700">
               <div class="flex justify-center shrink-0 items-center rounded-full bg-primary-100 h-12 w-12 dark:bg-primary-900">
                 <div class="font-semibold tracking-tight text-sm text-primary-600 dark:text-primary-300">
                   <Icon
@@ -136,7 +136,7 @@ const STEPS: {
             <p class="flex-grow px-5 py-4 text-gray-500 dark:text-gray-400">
               {description}
             </p>
-            <div class="px-5 py-4 flex justify-stretch flex-wrap gap-2">
+            <div class="px-5 pb-4 pt-2 flex justify-stretch flex-wrap gap-2">
               {technologies.map((technology) => (
                 <Pill>{technology}</Pill>
               ))}
