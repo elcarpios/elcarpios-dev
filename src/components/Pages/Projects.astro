@@ -1,0 +1,63 @@
+---
+import Card from "@components/Card.astro";
+import AntisinkLogo from "@assets/svg/antisink.svg";
+import ShellockLogo from "@assets/svg/shellock.svg";
+---
+
+<section
+  id="projects"
+  class="py-10 px-6 mx-auto max-w-screen-xl sm:py-14 lg:px-8 dark:bg-gray-900"
+>
+  <div class="mx-auto max-w-screen-lg text-center mb-10 lg:mb-16">
+    <div
+      class="mb-6 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+    >
+      <h2>Projects</h2>
+    </div>
+    <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+      My personal, collaborations and customers projects
+    </p>
+  </div>
+  <div class="grid gap-8 md:grid-cols-2">
+    <Card
+      title="Antisink App"
+      subtitle="Web, iOS and Android App"
+      description="Enhance user security and theft protection through IoT boat tracking."
+      link="https://antisink.no/antisink-tracker/"
+      image={{
+        src: AntisinkLogo,
+        alt: "Antisink logo",
+        class: "bg-blue-900",
+      }}
+      ,
+      technologies={[
+        "Typescript",
+        "React",
+        "CapcitorJS",
+        "Mongoose",
+        "Google Maps",
+        "Google Cloud",
+        "Firebase",
+      ]}
+    />
+    <Card
+      title="Shellock Platform"
+      subtitle="Web platform and API"
+      description="Real-time updates from anywhere in the world managed with some clicks."
+      link="https://shellock.co/product/"
+      image={{
+        src: ShellockLogo,
+        alt: "Shellock logo",
+        class: "bg-white",
+      }}
+      technologies={[
+        "Typescript",
+        "React",
+        "Mongoose",
+        "Google Maps",
+        "Google Cloud",
+        "Jest",
+      ]}
+    />
+  </div>
+</section>

@@ -2,9 +2,10 @@
 import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import MeImage from "@assets/images/me.png";
-import Projects from "@components/Projects.astro";
-import About from "@components/About.astro";
+import Projects from "@components/Pages/Projects.astro";
+import About from "@components/Pages/About.astro";
 import Icon from "@components/Icon.astro";
+import Partners from "@components/Partners.astro";
 ---
 
 <Layout title="elcarpios.dev">
@@ -12,7 +13,7 @@ import Icon from "@components/Icon.astro";
     <div class="grid max-w-screen-xl mx-auto xl:gap-0 sm:grid-cols-12 gap-6">
       <div class="mr-auto w-full place-self-center sm:col-span-7">
         <h1
-          class="mb-2 max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+          class="mb-2 max-w-2xl text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white"
         >
           Victor Carpio Fernández
         </h1>
@@ -24,9 +25,9 @@ import Icon from "@components/Icon.astro";
         <p
           class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
         >
-          Church-key viral you probably haven't heard of them, franzen affogato
-          narwhal skateboard taiyaki synth wayfarers lyft live-edge raclette tbh
-          thundercats.
+          I am a developer based on Barcelona. <br />
+           Working to achieve engaging user experiences. <br />
+           Collaborating together to achieve goals.
         </p>
         <a
           href="mailto:elcarpiosbit@gmail.com"
@@ -43,4 +44,5 @@ import Icon from "@components/Icon.astro";
   </section>
   <Projects />
   <About />
+  <Partners />
 </Layout>

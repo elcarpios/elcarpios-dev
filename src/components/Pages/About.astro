@@ -1,0 +1,149 @@
+---
+import Icon from "@components/Icon.astro";
+import Pill from "@components/Pill.astro";
+
+const STEP_TYPE = {
+  job: "briefcase",
+  certification: "certificate",
+};
+
+const STEPS: {
+  year: string;
+  title: string;
+  organisation: string;
+  description: string;
+  type: "job" | "certification";
+  technologies?: string[];
+}[] = [
+  {
+    year: "2008 - 2010",
+    title: "Computer Systems Admin",
+    organisation: "Col·legi Cultural",
+    description:
+      "Configuring, administrating and maintaining computer systems, guaranteeing system functionality, integrity of resources and services, with the required quality and complying with the current legislation.",
+    type: "certification",
+    technologies: ["HTML", "CSS", "Javascript", "PHP", "MySQL", "Linux"],
+  },
+  {
+    year: "2017",
+    title: "Fullstack Bootcamp",
+    organisation: "Ubiqum",
+    description:
+      "Eight months full-time developing multiple practical and job-oriented projects to train and enhance programming skills.",
+    type: "certification",
+    technologies: ["HTML", "CSS", "Javascript", "Java", "Spring Boot"],
+  },
+  {
+    year: "2017 - 2019",
+    title: "Frontend Developer",
+    organisation: "Marfeel",
+    description:
+      "Solving technical problems equally well with OO, DOM oriented, or JS. Understanding web technology stack. Providing technical support to the team and customer success.",
+    type: "job",
+    technologies: ["HTML", "SASS", "Javascript", "Java", "JSP"],
+  },
+  {
+    year: "2018",
+    title: "Mobile Web Specialist",
+    organisation: "Google",
+    description:
+      "Website layout and styling, networking, accessibility, PWA, progressive enhancement, performance, optimisation and caching. Security, testing and debugging. JS design principles.",
+    type: "certification",
+    technologies: ["HTML", "CSS", "Javascript"],
+  },
+  {
+    year: "2019 - 2021",
+    title: "Frontend Tech Lead",
+    organisation: "Marfeel",
+    description:
+      "Same as developer. Supporting the team by conducting educational talks about the product and technologies. Developing technical standards to review and generate code.",
+    type: "job",
+    technologies: [
+      "HTML",
+      "SASS",
+      "Typescript",
+      "Java",
+      "React",
+      "PHP",
+      "Figma",
+    ],
+  },
+  {
+    year: "2021 - 2023",
+    title: "Fullstack Developer",
+    organisation: "Shellock",
+    description:
+      "Building an IoT infrastructure, interface and customer's API. Pitching at events and partnership development. Customer success for support and product development.",
+    type: "job",
+    technologies: [
+      "HTML",
+      "SASS",
+      "Typescript",
+      "React",
+      "CapcitorJS",
+      "Mongoose",
+      "Express",
+      "Google Maps",
+      "Google Cloud",
+      "Jest",
+    ],
+  },
+];
+---
+
+<section
+  id="about"
+  class="py-10 px-6 mx-auto max-w-screen-xl sm:py-14 lg:px-8 dark:bg-gray-900"
+>
+  <div class="mx-auto max-w-screen-sm text-center mb-10 lg:mb-12">
+    <h2
+      class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+    >
+      Certifications and career milestones
+    </h2>
+    <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+      Most relevant academic certificates and work experiences
+    </p>
+  </div>
+  <div class="flex flex-col gap-8 lg:grid md:grid-cols-2 xl:grid-cols-3">
+    {
+      STEPS.map(
+        ({
+          title,
+          year,
+          organisation,
+          type,
+          description,
+          technologies = [],
+        }) => (
+          <div class="flex flex-col shadow-md overflow-hidden items-stretch bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex gap-4 bg-gray-100 p-5">
+              <div class="flex justify-center shrink-0 items-center rounded-full bg-primary-100 h-12 w-12 dark:bg-primary-900">
+                <div class="font-semibold tracking-tight text-sm text-primary-600 dark:text-primary-300">
+                  <Icon
+                    name={STEP_TYPE[type]}
+                    class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                  />
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold dark:text-white">{title}</h3>
+                <div class="flex gap-1 items-center font-light text-gray-500 dark:text-gray-400">
+                  {organisation} | {year}
+                </div>
+              </div>
+            </div>
+            <p class="flex-grow px-5 py-4 text-gray-500 dark:text-gray-400">
+              {description}
+            </p>
+            <div class="px-5 py-4 flex justify-stretch flex-wrap gap-2">
+              {technologies.map((technology) => (
+                <Pill>{technology}</Pill>
+              ))}
+            </div>
+          </div>
+        ),
+      )
+    }
+  </div>
+</section>
