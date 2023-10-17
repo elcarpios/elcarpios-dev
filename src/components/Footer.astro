@@ -46,23 +46,35 @@ import Icon from "./Icon.astro";
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <div
-        class="flex gap-1 flex-col sm:flex-row text-sm text-gray-500 dark:text-gray-400"
-      >
-        2023. Designed and coded using:
-        <span
-          ><a
-            href="https://astro.build/"
-            target="_blank"
-            class="hover:underline">Astro 🧑‍🚀</a
+      <div class="flex flex-col gap-2 text-sm">
+        <div
+          class="flex gap-1 flex-col sm:flex-row text-gray-500 dark:text-gray-400"
+        >
+          2023. Designed and coded using:
+          <span
+            ><a
+              href="https://astro.build/"
+              target="_blank"
+              class="hover:underline">Astro 🧑‍🚀</a
+            >
+             and
+            <a
+              href="https://flowbite.com/"
+              target="_blank"
+              class="hover:underline">Flowbite 💙</a
+            >
+          </span>
+        </div>
+        <div class="flex gap-1 items-center text-gray-400 dark:text-gray-500">
+          <Icon class="w-4 h-4" name="chevron-right" />
+          <span>
+            If you liked, check the source code <a
+              class="hover:underline"
+              href="https://github.com/elcarpios/elcarpios-dev"
+              target="_blank">here</a
+            >.</span
           >
-           and
-          <a
-            href="https://flowbite.com/"
-            target="_blank"
-            class="hover:underline">Flowbite 💙</a
-          >
-        </span>
+        </div>
       </div>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
         <a
