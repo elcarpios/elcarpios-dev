@@ -1,5 +1,6 @@
 ---
 import Icon from "@components/Icon.astro";
+import Pill from "@components/Pill.astro";
 
 const STEP_TYPE = {
   job: "briefcase",
@@ -128,15 +129,17 @@ const STEPS: {
               <div>
                 <h3 class="text-xl font-bold dark:text-white">{title}</h3>
                 <div class="flex gap-1 items-center font-light text-gray-500 dark:text-gray-400">
-                  {organisation} | {year}
+                  {year} | {organisation}
                 </div>
               </div>
             </div>
-            <p class="flex-grow px-5 py-4 font-medium text-gray-500 dark:text-gray-300">
+            <p class="flex-grow px-5 py-5 text-gray-500 dark:text-gray-500">
               {description}
             </p>
-            <div class="px-5 pb-5 pt-1 text-gray-500 text-sm leading-5 dark:text-gray-500">
-              {technologies.join(" | ")}
+            <div class="flex flex-wrap gap-2 px-5 py-5 pt-2">
+              {technologies.map((technology) => (
+                <Pill>{technology}</Pill>
+              ))}
             </div>
           </div>
         ),

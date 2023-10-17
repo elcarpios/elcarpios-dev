@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import MeImage from "@assets/images/me.png";
+import ProfileImage from "@assets/images/profile.png";
 import Projects from "@components/Pages/Projects.astro";
 import About from "@components/Pages/About.astro";
 import Icon from "@components/Icon.astro";
@@ -25,9 +25,9 @@ import Partners from "@components/Partners.astro";
         <p
           class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
         >
-          I am a developer based on Barcelona. <br />
-           Working to achieve engaging user experiences. <br />
-           Collaborating together to achieve goals.
+          Based on Barcelona. <br />
+           Engaging user experiences. <br />
+           Working towards a better websites.
         </p>
         <a
           href="mailto:elcarpiosbit@gmail.com"
@@ -37,8 +37,10 @@ import Partners from "@components/Partners.astro";
           <Icon class="w-5 h-5" name="arrow-right" />
         </a>
       </div>
-      <div class="flex align-center md:mt-0 sm:col-span-5 mx-auto">
-        <Image src={MeImage} alt="random image" />
+      <div
+        class="flex align-center md:mt-0 sm:col-span-5 mx-auto rounded-lg overflow-hidden shadow-md"
+      >
+        <Image src={ProfileImage} alt="random image" />
       </div>
     </div>
   </section>
