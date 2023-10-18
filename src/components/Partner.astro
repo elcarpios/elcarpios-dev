@@ -9,7 +9,7 @@ interface Props {
 const { logo, link } = Astro.props;
 ---
 
-<a href={link} class="flex justify-center items-center">
+<a href={link} aria-label={logo} class="flex justify-center items-center">
   <Icon
     name={logo}
     class="px-2 h-10 w-48 hover:text-gray-900 dark:hover:text-white"
