@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import ContactForm from "@components/Form.svelte";
+
+export const prerender = true;
 ---
 
 <Layout title="elcarpios.dev - Contact">
@@ -19,7 +21,7 @@ import ContactForm from "@components/Form.svelte";
         <span>Got a technical question?</span>
         <span>Want to start working on a project?</span>
       </p>
-      <ContactForm client:load />
+      <ContactForm client:only="svelte" />
     </div>
   </section>
 </Layout>

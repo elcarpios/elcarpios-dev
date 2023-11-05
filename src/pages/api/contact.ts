@@ -23,15 +23,11 @@ export const POST: APIRoute = async ({ request }) => {
         success: false,
         message: 'All fields are important!',
         errors
-      }), {
-        status: 200
-      }
+      }), { status: 200 }
     );
   }
 
-
   const { success } = await sendEmail(getContactEmailData(data))
-
 
   return new Response(
     JSON.stringify({
