@@ -1,0 +1,25 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ContactForm from "@components/Form.svelte";
+---
+
+<Layout title="elcarpios.dev - Contact">
+  <section id="contact">
+    <div
+      class="py-10 px-6 mx-auto max-w-screen-md sm:py-14 lg:px-8 dark:bg-gray-900"
+    >
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+      >
+        Contact
+      </h2>
+      <p
+        class="flex justify-center gap-x-2 gap-y-0 flex-wrap text-lg mb-8 md:mb-10 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
+      >
+        <span>Got a technical question?</span>
+        <span>Want to start working on a project?</span>
+      </p>
+      <ContactForm client:load />
+    </div>
+  </section>
+</Layout>
