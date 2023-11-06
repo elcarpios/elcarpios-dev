@@ -3,7 +3,7 @@ export const getContactEmailData = ({ name, email, message }: { name: FormDataEn
     {
       CustomCampaign: 'ContactForm',
       From: {
-        Email: "contact@elcarpios.dev",
+        Email: "contact@vcarpio.dev",
         Name: "Contact Form"
       },
       ReplyTo: {
@@ -12,7 +12,7 @@ export const getContactEmailData = ({ name, email, message }: { name: FormDataEn
       },
       To: [
         {
-          Email: "hello@elcarpios.dev",
+          Email: "hello@vcarpio.dev",
           Name: "Victor Carpio"
         }
       ],
