@@ -1,5 +1,4 @@
 ---
-import Menu from "./Menu.astro";
 import Logo from "./Logo.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
@@ -13,7 +12,12 @@ import ThemeToggle from "./ThemeToggle.astro";
       <div class="mr-1 lg:mr-6">
         <ThemeToggle />
       </div>
-      <Menu />
+      <a
+        href="/contact"
+        class="flex gap-1 ml-2.5 px-3 py-1.5 text-white rounded-lg bg-malt"
+      >
+        Say hello! 👋
+      </a>
     </div>
   </nav>
 </header>
