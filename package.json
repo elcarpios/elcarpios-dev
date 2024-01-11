@@ -13,7 +13,7 @@
     "@astrojs/svelte": "^4.0.3",
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^5.0.2",
-    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
     "astro": "^3.2.2",
     "flowbite": "^1.8.1",
     "node-mailjet": "^6.0.4",
