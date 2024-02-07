@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-    './node_modules/flowbite/**/*.js'
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
   ],
   darkMode: 'class',
   theme: {
@@ -45,17 +44,7 @@ module.exports = {
         'system-ui',
         '-apple-system',
         'system-ui'
-      ],
-      sans: [
-        'Poppins',
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'system-ui'
       ]
     },
-  },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  }
 }

@@ -1,0 +1,29 @@
+---
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+import Milestone from "@components/Milestone.astro";
+import MilestonesData from "@data/milestones.json";
+
+export type MilestoneType = "job" | "certification";
+
+export type Milestone = {
+  year: string;
+  title: string;
+  organisation: string;
+  description: string;
+  type: MilestoneType;
+  technologies: string[];
+};
+---
+
+<Section id="milestones">
+  <Heading tag="h3">Milestones</Heading>
+  <Heading tag="h6" className="mb-8">Certifications and career events</Heading>
+  <div class="flex flex-col gap-16 px-2">
+    {
+      (MilestonesData as Milestone[]).map((milestone) => (
+        <Milestone {...milestone} />
+      ))
+    }
+  </div>
+</Section>

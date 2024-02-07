@@ -1,9 +1,8 @@
-
 <script lang="ts">
   import PaperPlane from "@assets/svg/paper-plane.svg?raw";
 
   let formSuccess: boolean;
-  let formErrors: string[] = []
+  let formErrors: string[] = [];
 
   async function submitHandler(e: SubmitEvent) {
     e.preventDefault();

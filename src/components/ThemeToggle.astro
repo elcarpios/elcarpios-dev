@@ -1,9 +1,8 @@
-<button
-  id="theme-toggle"
-  type="button"
-  aria-label="Theme toggle"
-  class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5 lg:p-1.5"
->
+---
+import LinkButton from "@components/LinkButton.astro";
+---
+
+<LinkButton id="theme-toggle" aria-label="Theme toggle" style="secondary">
   <svg
     id="theme-toggle-dark-icon"
     class="hidden w-5 h-5"
@@ -24,7 +23,7 @@
       fill-rule="evenodd"
       clip-rule="evenodd"></path></svg
   >
-</button>
+</LinkButton>
 
 <script>
   const themeToggleBtn = document.getElementById("theme-toggle")!;

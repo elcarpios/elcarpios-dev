@@ -1,6 +1,8 @@
 ---
-import Logo from "./Header/Logo.astro";
-import Icon from "./Icon.astro";
+import Logo from "@components/Logo.astro";
+import Icon from "@components/Icon.astro";
+import Heading from "@components/Heading.astro";
+import LinkButton from "@components/LinkButton.astro";
 ---
 
 <footer class="px-6 pt-12 pb-8 bg-white dark:bg-gray-900">
@@ -11,113 +13,88 @@ import Icon from "./Icon.astro";
       </div>
       <div class="grid grid-cols-2 gap-8 sm:gap-24">
         <div>
-          <h2
-            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-          >
-            Porfolio
-          </h2>
-          <ul class="text-gray-600 dark:text-gray-400">
-            <li class="mb-4">
-              <a href="/" class="hover:underline">Presentation</a>
-            </li>
-            <li class="mb-4">
-              <a href="/projects" class="hover:underline">Projects</a>
+          <Heading tag="h6" className="mb-4">PORTFOLIO</Heading>
+          <ul class="flex flex-col gap-y-2">
+            <li>
+              <LinkButton href="/" style="outline">Presentation</LinkButton>
             </li>
             <li>
-              <a href="/about-me" class="hover:underline">About me</a>
+              <LinkButton href="/projects" style="outline">Projects</LinkButton>
             </li>
           </ul>
         </div>
         <div>
-          <h2
-            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-          >
-            Contact
-          </h2>
-          <ul class="text-gray-600 dark:text-gray-400">
-            <li class="mb-4">
-              <a href="/contact" class="hover:underline">Say hello!</a>
+          <Heading tag="h6" className="mb-4">CONTACT</Heading>
+          <ul class="flex flex-col gap-y-2">
+            <li>
+              <LinkButton href="mailto:hello@vcarpio.dev" style="outline">
+                Email
+              </LinkButton>
             </li>
-            <li class="mb-4">
-              <a
-                target="_blank"
+            <li>
+              <LinkButton
                 href="https://www.malt.es/project/new?freelanceId=6502e363a1ea6a6aed580511"
-                class="hover:underline">Malt</a
+                style="outline"
               >
-            </li>
-            <li class="mb-4">
-              <a href="mailto:hello@vcarpio.dev" class="hover:underline"
-                >Email</a
-              >
+                Malt
+              </LinkButton>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div class="sm:flex sm:items-center sm:justify-between">
-      <div class="flex flex-col gap-2 text-sm">
-        <div
-          class="flex gap-1 flex-col sm:flex-row text-gray-500 dark:text-gray-400"
-        >
-          2023. Designed and coded using:
-          <span
-            ><a
-              href="https://astro.build/"
-              target="_blank"
-              class="hover:underline">Astro 🧑‍🚀</a
-            >
-            and
-            <a
-              href="https://flowbite.com/"
-              target="_blank"
-              class="hover:underline">Flowbite 💙</a
-            >
-          </span>
+    <div class="flex items-center justify-between gap-y-2 flex-wrap">
+      <div class="flex flex-col gap-3 text-sm">
+        <div class="leading-6">
+          2023. Designed and coded using
+          <LinkButton style="outline" href="https://astro.build/">
+            Astro
+          </LinkButton> 🧑‍🚀 and
+          <LinkButton style="outline" href="https://tailwindcss.com/">
+            TailwindCSS
+          </LinkButton> 💙
         </div>
-        <div class="flex gap-1 items-center text-gray-500 dark:text-gray-400">
-          <span>
-            If you liked, <a
-              class="hover:underline"
-              href="https://github.com/elcarpios/vcarpio-dev"
-              target="_blank">check the source code</a
-            >.</span
+        <span
+          >✨
+          <LinkButton
+            style="outline"
+            className="underline"
+            href="https://github.com/elcarpios/vcarpio-dev"
           >
-        </div>
+            Source code
+          </LinkButton></span
+        >
       </div>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-        <a
+        <LinkButton
           href="https://www.instagram.com/elcarpios/"
           aria-label="Instagram"
-          target="_blank"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          style="outline"
         >
-          <Icon name="instagram" class="w-5 h-5" />
-        </a>
-        <a
+          <Icon name="instagram" />
+        </LinkButton>
+        <LinkButton
           href="https://github.com/elcarpios"
           aria-label="Github"
-          target="_blank"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          style="outline"
         >
-          <Icon name="github" class="w-5 h-5" />
-        </a>
-        <a
+          <Icon name="github" />
+        </LinkButton>
+        <LinkButton
           href="https://www.linkedin.com/in/vicarpio/"
           aria-label="Linkedin"
-          target="_blank"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          style="outline"
         >
-          <Icon name="linkedin" class="w-5 h-5" />
-        </a>
-        <a
+          <Icon name="linkedin" />
+        </LinkButton>
+        <LinkButton
           href="https://www.malt.es/profile/victorcarpio"
           aria-label="Malt"
-          target="_blank"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          style="outline"
         >
-          <Icon name="malt" class="w-5 h-5" />
-        </a>
+          <Icon name="malt" />
+        </LinkButton>
       </div>
     </div>
   </div>

@@ -1,23 +1,14 @@
 ---
+import Section from "@components/Section.astro";
 import Card from "@components/Card.astro";
+import Heading from "@components/Heading.astro";
 import AntisinkLogo from "@assets/svg/antisink.svg";
 import ShellockLogo from "@assets/svg/shellock.svg";
 ---
 
-<section
-  id="projects"
-  class="py-10 px-6 mx-auto max-w-screen-xl sm:py-14 lg:px-8 dark:bg-gray-900"
->
-  <div class="mx-auto max-w-screen-lg text-center mb-10 lg:mb-16">
-    <div
-      class="mb-6 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-    >
-      <h2>Projects</h2>
-    </div>
-    <p class="text-gray-500 sm:text-xl dark:text-gray-400">
-      My personal, work and collaboration projects
-    </p>
-  </div>
+<Section id="projects">
+  <Heading tag="h3">Projects</Heading>
+  <Heading tag="h6" className="mb-8">Personal, work and collaborations</Heading>
   <div class="grid gap-8 md:grid-cols-2">
     <Card
       title="Antisink App"
@@ -60,4 +51,4 @@ import ShellockLogo from "@assets/svg/shellock.svg";
       ]}
     />
   </div>
-</section>
+</Section>

@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import ProfileImage from "@assets/images/profile.jpg";
+import Icon from "@components/Icon.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Heading from "@components/Heading.astro";
+import Section from "@components/Section.astro";
+
+export const prerender = true;
+---
+
+<Section className="bg-gray-50 dark:bg-gray-700">
+  <div class="grid gap-6 md:grid-cols-12 xl:gap-0">
+    <div class="mr-auto w-full place-self-center md:col-span-7">
+      <div class="mb-4 md:mb-8">
+        <Heading>Victor Carpio Fernández</Heading>
+        <Heading
+          tag="h5"
+          className="font-medium text-gray-700 dark:text-gray-200"
+        >
+          Freelance Fullstack Developer
+        </Heading>
+      </div>
+      <p
+        class="mb-4 md:mb-6 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-300"
+      >
+        Based in Barcelona. <br />
+        Enhancing user experiences. <br />
+        Working towards better web platforms.
+      </p>
+      <div class="grid grid-cols-1 gap-x-3 gap-y-2 lg:flex lg:flex-wrap">
+        <LinkButton href="/contact">
+          Start working together
+          <Icon name="arrow-right" />
+        </LinkButton>
+        <LinkButton
+          style="secondary"
+          href="https://www.malt.es/profile/victorcarpio"
+        >
+          <Icon class="text-malt" name="malt" />
+          Malt profile
+        </LinkButton>
+      </div>
+    </div>
+    <Image
+      class="md:col-span-5 mx-auto rounded-lg shadow-md"
+      src={ProfileImage}
+      alt="Victor Carpio"
+    />
+  </div>
+</Section>

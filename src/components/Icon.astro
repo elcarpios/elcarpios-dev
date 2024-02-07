@@ -9,6 +9,6 @@ const { default: innerHTML } = await import(`../assets/svg/${name}.svg?raw`);
 ---
 
 <span
-  class={`flex justify-center items-center ${className}`}
+  class={`flex justify-center items-center w-6 h-6 ${className}`}
   set:html={innerHTML}
 />

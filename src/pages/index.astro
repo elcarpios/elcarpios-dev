@@ -1,62 +1,14 @@
 ---
-import { Image } from "astro:assets";
-import Layout from "@layouts/Layout.astro";
-import ProfileImage from "@assets/images/profile.jpg";
-import Projects from "@components/Pages/Projects.astro";
-import About from "@components/Pages/About.astro";
-import Icon from "@components/Icon.astro";
-import Partners from "@components/Partners.astro";
+import Default from "@layouts/Default.astro";
+import Projects from "@components/Projects.astro";
+import Milestones from "@components/Milestones.astro";
+import Intro from "@components/Intro.astro";
 
 export const prerender = true;
 ---
 
-<Layout title="Victor Carpio | Freelance Fullstack Developer">
-  <section class="px-6 py-8 bg-gray-50 dark:bg-gray-700">
-    <div class="grid max-w-screen-xl mx-auto xl:gap-0 md:grid-cols-12 gap-6">
-      <div class="mr-auto w-full place-self-center md:col-span-7">
-        <h1
-          class="mb-2 max-w-2xl text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white"
-        >
-          Victor Carpio Fernández
-        </h1>
-        <p
-          class="font-medium md:text-md lg:text-lg mb-6 text-gray-500 dark:text-gray-200"
-        >
-          Freelance Fullstack Developer
-        </p>
-        <p
-          class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-300"
-        >
-          Based in Barcelona. <br />
-          Enhancing user experiences. <br />
-          Working towards better web platforms.
-        </p>
-        <div class="flex flex-wrap gap-x-3 gap-y-2 justify-stretch">
-          <a
-            href="/contact"
-            class="inline-flex gap-2 items-center grow md:grow-0 justify-center px-5 py-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-1 focus:ring-primary-300 border border-primary-900 dark:focus:ring-primary-900"
-          >
-            Start working together
-            <Icon class="w-5 h-5" name="arrow-right" />
-          </a>
-          <a
-            href="https://www.malt.es/profile/victorcarpio"
-            target="_blank"
-            class="inline-flex gap-1 items-center grow md:grow-0 justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-1 focus:ring-gray-100 dark:text-white dark:border-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          >
-            <Icon class="w-5 h-5 text-malt" name="malt" />
-            Malt profile
-          </a>
-        </div>
-      </div>
-      <div
-        class="flex align-center md:mt-0 md:col-span-5 mx-auto rounded-lg overflow-hidden shadow-md"
-      >
-        <Image src={ProfileImage} alt="random image" />
-      </div>
-    </div>
-  </section>
+<Default title="Victor Carpio | Freelance Fullstack Developer">
+  <Intro />
   <Projects />
-  <About />
-  <Partners />
-</Layout>
+  <Milestones />
+</Default>

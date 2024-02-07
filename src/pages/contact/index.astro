@@ -1,11 +1,11 @@
 ---
-import Layout from "@layouts/Layout.astro";
+import Default from "@layouts/Default.astro";
 import ContactForm from "@components/Form.svelte";
 
 export const prerender = true;
 ---
 
-<Layout title="Victor Carpio | Freelance Fullstack Developer - Contact">
+<Default title="Victor Carpio | Freelance Fullstack Developer - Contact">
   <section id="contact">
     <div
       class="py-10 px-6 mx-auto max-w-screen-md sm:py-14 lg:px-8 dark:bg-gray-900"
@@ -24,4 +24,4 @@ export const prerender = true;
       <ContactForm client:only="svelte" />
     </div>
   </section>
-</Layout>
+</Default>

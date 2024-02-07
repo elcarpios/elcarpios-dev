@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "@layouts/Layout.astro";
-import Pill from "./Pill.astro";
-import Icon from "./Icon.astro";
+import Default from "@layouts/Default.astro";
+import Pill from "@components/Pill.astro";
+import Icon from "@components/Icon.astro";
 
 interface Props {
   title: string;
@@ -20,7 +20,7 @@ interface Props {
 const { title, subtitle, image, description, technologies, link } = Astro.props;
 ---
 
-<Layout
+<Default
   title={`Victor Carpio | Freelance Fullstack Developer - Projects - ${title}`}
 >
   <section class="px-6 py-8 bg-gray-50 dark:bg-gray-700">
@@ -63,4 +63,4 @@ const { title, subtitle, image, description, technologies, link } = Astro.props;
       </div>
     </div>
   </section>
-</Layout>
+</Default>
