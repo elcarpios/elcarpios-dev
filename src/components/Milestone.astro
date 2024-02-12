@@ -10,8 +10,7 @@ const STEP_TYPE: { [key in MilestoneType]: string } = {
   certification: "certificate",
 };
 
-const { type, title, organisation, year, description, technologies } =
-  Astro.props;
+const { type, title, organisation, year, description } = Astro.props;
 ---
 
 <article class="milestone flex gap-5 max-w-screen-md">
@@ -24,12 +23,12 @@ const { type, title, organisation, year, description, technologies } =
       <Icon name={STEP_TYPE[type]} class="text-primary-600" />
     </div>
   </div>
-  <div class="py-1">
-    <Heading tag="h5" className="mb-1">{title}</Heading>
+  <div class="mt-[8px]">
+    <Heading tag="h4" mb="1">{organisation}</Heading>
     <div class="font-light text-gray-600 dark:text-gray-200 mb-4">
-      {year} | {organisation}
+      {year} | {title}
     </div>
-    <p class="text-gray-500 dark:text-gray-400">
+    <p class="font-light text-gray-500 dark:text-gray-400">
       {description}
     </p>
   </div>

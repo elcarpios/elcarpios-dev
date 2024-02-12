@@ -1,7 +1,45 @@
 [
   {
-    "year": "2023 - 2021",
+    "year": "2023 - Currently",
     "title": "Fullstack Developer",
+    "organisation": "vcarpio.dev",
+    "description": "Building an IoT infrastructure, interface and customer's API. Pitching at events and partnership development. Customer success for support and product development.",
+    "type": "job",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "Typescript",
+      "React",
+      "CapcitorJS",
+      "Mongoose",
+      "Express",
+      "Google Maps",
+      "Google Cloud",
+      "Jest"
+    ]
+  },
+  {
+    "year": "2023",
+    "title": "Fullstack Developer",
+    "organisation": "Antisink",
+    "description": "Building an IoT infrastructure, interface and customer's API. Pitching at events and partnership development. Customer success for support and product development.",
+    "type": "job",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "Typescript",
+      "React",
+      "CapcitorJS",
+      "Mongoose",
+      "Express",
+      "Google Maps",
+      "Google Cloud",
+      "Jest"
+    ]
+  },
+  {
+    "year": "2021 - 2023",
+    "title": "CTO & Fullstack Developer",
     "organisation": "Shellock",
     "description": "Building an IoT infrastructure, interface and customer's API. Pitching at events and partnership development. Customer success for support and product development.",
     "type": "job",
@@ -19,22 +57,6 @@
     ]
   },
   {
-    "year": "2021 - 2019",
-    "title": "Frontend Tech Lead",
-    "organisation": "Marfeel",
-    "description": "Same as developer. Supporting the team by conducting educational talks about the product and technologies. Developing technical standards to review and generate code.",
-    "type": "job",
-    "technologies": [
-      "HTML",
-      "SASS",
-      "Typescript",
-      "Java",
-      "React",
-      "PHP",
-      "Figma"
-    ]
-  },
-  {
     "year": "2018",
     "title": "Mobile Web Specialist",
     "organisation": "Google",
@@ -47,17 +69,19 @@
     ]
   },
   {
-    "year": "2019 - 2017",
-    "title": "Frontend Developer",
+    "year": "2017 - 2021",
+    "title": "Frontend Tech Lead",
     "organisation": "Marfeel",
-    "description": "Solving technical problems equally well with OO, DOM oriented, or JS. Understanding web technology stack. Providing technical support to the team and customer success.",
+    "description": "Solving technical problems equally well with OO, DOM oriented, or JS. Understanding web technology stack. Providing technical support to the team and customer success. Supporting the team by conducting educational talks about the product and technologies. Developing technical standards to review and generate code.",
     "type": "job",
     "technologies": [
       "HTML",
       "SASS",
-      "Javascript",
+      "Typescript",
       "Java",
-      "JSP"
+      "React",
+      "PHP",
+      "Figma"
     ]
   }
 ]
