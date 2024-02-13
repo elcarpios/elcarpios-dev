@@ -4,7 +4,7 @@ import LinkButton from "@components/LinkButton.astro";
 
 <LinkButton id="theme-toggle" aria-label="Theme toggle" style="secondary">
   <svg
-    id="theme-toggle-dark-icon"
+    id="theme-toggle-gray-icon"
     class="hidden w-5 h-5"
     fill="currentColor"
     viewBox="0 0 20 20"
@@ -28,7 +28,7 @@ import LinkButton from "@components/LinkButton.astro";
 <script>
   const themeToggleBtn = document.getElementById("theme-toggle")!;
   const themeToggleDarkIcon = themeToggleBtn.querySelector(
-    "#theme-toggle-dark-icon",
+    "#theme-toggle-gray-icon",
   )!;
   const themeToggleLightIcon = themeToggleBtn.querySelector(
     "#theme-toggle-light-icon",

@@ -16,10 +16,17 @@ import LinkButton from "@components/LinkButton.astro";
           <Heading tag="h6" className="mb-4">PORTFOLIO</Heading>
           <ul class="flex flex-col gap-y-2">
             <li>
-              <LinkButton href="/" style="outline">Presentation</LinkButton>
+              <LinkButton href="/#intro" style="outline">Intro</LinkButton>
             </li>
             <li>
-              <LinkButton href="/projects" style="outline">Projects</LinkButton>
+              <LinkButton href="/#projects" style="outline">
+                Projects
+              </LinkButton>
+            </li>
+            <li>
+              <LinkButton href="/#experience" style="outline">
+                Experience
+              </LinkButton>
             </li>
           </ul>
         </div>
@@ -30,6 +37,9 @@ import LinkButton from "@components/LinkButton.astro";
               <LinkButton href="mailto:hello@vcarpio.dev" style="outline">
                 Email
               </LinkButton>
+            </li>
+            <li>
+              <LinkButton href="/contact" style="outline">Form</LinkButton>
             </li>
             <li>
               <LinkButton

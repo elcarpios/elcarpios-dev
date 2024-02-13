@@ -1,0 +1,23 @@
+---
+import type { Experience, ExperienceType } from "@components/Experiences.astro";
+import Heading from "@components/Heading.astro";
+
+type Props = Experience;
+
+const STEP_TYPE: { [key in ExperienceType]: string } = {
+  job: "briefcase",
+  certification: "certificate",
+};
+
+const { type, title, organisation, year, description } = Astro.props;
+---
+
+<article class="max-w-screen-md">
+  <Heading tag="h4" mb="1">{organisation}</Heading>
+  <div class="font-light text-gray-600 dark:text-gray-200 mb-4">
+    {year} | {title}
+  </div>
+  <p class="font-light text-balance text-gray-500 dark:text-gray-400">
+    {description}
+  </p>
+</article>

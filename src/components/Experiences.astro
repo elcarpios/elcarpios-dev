@@ -1,0 +1,28 @@
+---
+import Section from "@components/Section.astro";
+import Experience from "@components/Experience.astro";
+import ExperienceData from "@data/experience.json";
+
+export type ExperienceType = "job" | "certification";
+
+export type Experience = {
+  name: string;
+  year: string;
+  title: string;
+  organisation: string;
+  description: string;
+  type: ExperienceType;
+  technologies: string[];
+};
+---
+
+<Section id="experience" className="bg-gray-50 dark:bg-gray-800">
+  <Fragment slot="header">Experience</Fragment>
+  <div class="flex flex-col gap-8">
+    {
+      (ExperienceData as Experience[]).map((experience) => (
+        <Experience {...experience} />
+      ))
+    }
+  </div>
+</Section>

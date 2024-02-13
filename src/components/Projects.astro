@@ -1,15 +1,13 @@
 ---
 import Section from "@components/Section.astro";
 import Card from "@components/Card.astro";
-import Heading from "@components/Heading.astro";
 import AntisinkLogo from "@assets/svg/antisink.svg";
 import ShellockLogo from "@assets/svg/shellock.svg";
 ---
 
-<Section id="projects">
-  <Heading tag="h3">Projects</Heading>
-  <Heading tag="h6" className="mb-8">Personal, work and collaborations</Heading>
-  <div class="grid gap-8 md:grid-cols-2">
+<Section id="projects" className="bg-white dark:bg-gray-900">
+  <Fragment slot="header">Projects</Fragment>
+  <div class="grid gap-8 grid-cols-1 lg:grid-cols-2">
     <Card
       title="Antisink App"
       subtitle="Web, iOS and Android App"
@@ -33,7 +31,7 @@ import ShellockLogo from "@assets/svg/shellock.svg";
     />
     <Card
       title="Shellock Platform"
-      subtitle="Web platform and API"
+      subtitle="Web platform and rest API"
       description="Real-time updates from anywhere in the world managed with some clicks."
       link="https://shellock.co/product/"
       image={{
