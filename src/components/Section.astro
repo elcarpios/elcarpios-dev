@@ -13,7 +13,7 @@ const hasHeader = Astro.slots.header;
 <section class={`relative scroll-mt-[67px] px-6 py-6 md:py-14 lg:py-16 xl:py-18 ${className}`} id={id}>
   <div class="bg-inherit md:flex md:gap-x-16 2xl:block mx-auto max-w-screen-xl">
     { hasHeader ?
-      <header class="bg-inherit sticky pb-1 pt-2 -mt-3 text-sm md:mt-0 self-start top-[68px] md:[writing-mode:vertical-lr] 2xl:[writing-mode:initial] md:rotate-180 2xl:rotate-0">
+      <header class="bg-inherit sticky text-sm md:mt-0 self-start pt-3 pb-1 top-[68px] md:pt-0 md:pb-0 md:top-[78px] md:[writing-mode:vertical-lr] 2xl:[writing-mode:initial] md:rotate-180 2xl:rotate-0">
         <Heading className="2xl:absolute 2xl:-transform-x-full 2xl:-translate-x-[150%]" tag="h4">
           <a href={`#${id}`}># <slot name="header" /></a>
         </Heading>
